@@ -4,106 +4,116 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - jery sokoy</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="foto\logo.png" />
-
+    <link rel="icon" type="image/png" sizes="16x16" href="foto/logo.png" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   </head>
+
   <body>
-    <!---Home--->
-    <section id="home">
-
-    <div class="overlay"></div>
-
-    <div class="content">
-
-        <h1 data-aos="fade-down">
-            Jery Sokoy
-        </h1>
-
-        <p data-aos="fade-up" data-aos-delay="300">
-            Frontend Developer
-        </p>
-
-        <h2 data-aos="zoom-in" data-aos-delay="500">
-            Selamat Datang
-        </h2>
-
-        <p data-aos="fade-up" data-aos-delay="700">
-            Website Portofolio Saya
-        </p>
-
-        <a href="#about"
-           class="btn"
-           data-aos="fade-up"
-           data-aos-delay="900">
-           Mulai
-        </a>
-
+    <!-- ================= LOADER ================= -->
+    <div id="loader">
+      <div class="loader-bg"></div>
+      <div class="loader-content">
+        <h1 class="logo">JS</h1>
+        <h2>Jery Sokoy</h2>
+        <p>Frontend Developer</p>
+        <div class="loading-bar">
+          <div class="loading-progress"></div>
+        </div>
+        <span class="loading-number">0%</span>
+      </div>
     </div>
-</section>
 
-  <section id="about">
+    <!-- ================= HOME ================= -->
+    <section id="home">
+      <div class="overlay"></div>
+      <div class="content">
+        <h1 class="hero-title">Jery Sokoy</h1>
+        <p class="hero-subtitle">Frontend Developer</p>
+        <h2 class="hero-heading">Selamat Datang</h2>
+        <p class="hero-description">Website Portofolio Saya</p>
+        <a href="#about" class="btn hero-btn">Mulai</a>
+      </div>
+    </section>
 
-    <div class="container">
-
+    <!-- ================= ABOUT ================= -->
+    <section id="about">
+      <div class="container">
         <div class="section-title hidden">
-            <h2>About Me</h2>
-            <p>Get To Know Me Better</p>
+          <h2>About Me</h2>
+          <p>Get To Know Me Better</p>
         </div>
 
         <div class="about-content">
+          <div class="about-image hidden left">
+            <img src="foto/Desain tanpa judul (3).png" alt="Jery Sokoy" />
+          </div>
 
-            <div class="about-image hidden left">
-                <img src="foto/Desain tanpa judul (3).png" alt="">
+          <div class="about-text">
+            <h3 class="hidden right">Hi, I'm Jery Sokoy</h3>
+            <h4 class="hidden right delay1">
+              Frontend Developer | UI Designer | Video Editor
+            </h4>
+            <p class="hidden right delay2">
+              Saya adalah mahasiswa Informatika yang memiliki minat pada
+              Front-End Development, UI/UX Design, Graphic Design, dan Video
+              Editing.
+            </p>
+
+            <div class="about-info">
+              <div class="info-box hidden zoom delay3">
+                <h3>10+</h3>
+                <span>Projects</span>
+              </div>
+              <div class="info-box hidden zoom delay4">
+                <h3>3+</h3>
+                <span>Years Learning</span>
+              </div>
+              <div class="info-box hidden zoom delay5">
+                <h3>5+</h3>
+                <span>Skills</span>
+              </div>
             </div>
-
-            <div class="about-text">
-
-                <h3 class="hidden right">
-                    Hi, I'm Jery Sokoy
-                </h3>
-
-                <h4 class="hidden right delay1">
-                    Frontend Developer | UI Designer | Video Editor
-                </h4>
-
-                <p class="hidden right delay2">
-                    Saya adalah mahasiswa Informatika yang memiliki minat pada
-                    Front-End Development, UI/UX Design, Graphic Design,
-                    dan Video Editing.
-                </p>
-
-                <div class="about-info">
-
-                    <div class="info-box hidden zoom delay3">
-                        <h3>10+</h3>
-                        <span>Projects</span>
-                    </div>
-
-                    <div class="info-box hidden zoom delay4">
-                        <h3>3+</h3>
-                        <span>Years Learning</span>
-                    </div>
-
-                    <div class="info-box hidden zoom delay5">
-                        <h3>5+</h3>
-                        <span>Skills</span>
-                    </div>
-
-                </div>
-
-            </div>
-
+          </div>
         </div>
-
-    </div>
-
-</section>
+      </div>
     </section>
 
-    <section id="Education">
-      <div></div>
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">Technologies & Tools I Work With</p>
+
+        <div class="skills-grid">
+          <div class="skill-item">
+            <img src="aset/photoshop.png" alt="Photoshop" />
+            <span>Photoshop</span>
+          </div>
+          <div class="skill-item">
+            <img src="aset/premier pro.png" alt="Premiere Pro" />
+            <span>Premiere Pro</span>
+          </div>
+          <div class="skill-item">
+            <img src="aset/HTML.png" alt="HTML5" />
+            <span>HTML5</span>
+          </div>
+          <div class="skill-item">
+            <img src="aset/css.png" alt="CSS3" />
+            <span>CSS3</span>
+          </div>
+          <div class="skill-item">
+            <img src="aset/java.png" alt="JavaScript" />
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-item">
+            <img src="aset/canva.png" alt="Canva" />
+            <span>Canva</span>
+          </div>
+        </div>
+      </div>
     </section>
+
     <section id="Portfolio">
       <div></div>
     </section>

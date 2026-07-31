@@ -844,12 +844,12 @@ html {
   height: 120px;
   object-fit: contain;
 
-  background: #111;
-  padding: 18px;
+  background: transparent;
+  padding: 0;
 
-  border-radius: 50%;
+  border-radius: 0;
 
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  box-shadow: none;
 
   transition: 0.35s;
 }
@@ -866,6 +866,48 @@ html {
   color: #fff;
   font-size: 1.2rem;
   font-weight: 600;
+
+  /* Education scroll animation */
+  .education-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .education-item.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .education-item:nth-child(1) {
+    transition-delay: 0.05s;
+  }
+  .education-item:nth-child(2) {
+    transition-delay: 0.15s;
+  }
+  .education-item:nth-child(3) {
+    transition-delay: 0.25s;
+  }
+  .education-item:nth-child(4) {
+    transition-delay: 0.35s;
+  }
+
+  .education-section .section-title,
+  .education-section .section-subtitle {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .education-section .section-title.show,
+  .education-section .section-subtitle.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .education-section .section-subtitle {
+    transition-delay: 0.15s;
+  }
 }
 /*=========================================
             CONTACT
@@ -963,4 +1005,40 @@ html {
   color: #777;
 
   font-size: 1rem;
+}
+
+/* Contact scroll animation */
+.contact-small,
+.contact-title,
+.contact-btn,
+.contact-links,
+.copyright {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.contact-small.show,
+.contact-title.show,
+.contact-btn.show,
+.contact-links.show,
+.copyright.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-small {
+  transition-delay: 0.05s;
+}
+.contact-title {
+  transition-delay: 0.15s;
+}
+.contact-btn {
+  transition-delay: 0.3s;
+}
+.contact-links {
+  transition-delay: 0.45s;
+}
+.copyright {
+  transition-delay: 0.55s;
 }

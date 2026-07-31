@@ -202,24 +202,18 @@ body {
 
 .info-box {
   flex: 1;
-
   min-width: 160px;
-
   background: #1f1f1f;
-
   padding: 30px;
-
   border-radius: 18px;
-
   text-align: center;
-
   transition: 0.4s;
+  cursor: pointer;
 }
-
 .info-box:hover {
-  transform: translateY(-10px);
-
+  transform: translateY(-10px) scale(1.03);
   background: #7c3aed;
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.35);
 }
 
 .info-box h3 {
@@ -545,5 +539,26 @@ body {
 @media (max-width: 480px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* ===========================
+   Skills Title Animation
+=========================== */
+
+  .skills-section .section-title,
+  .skills-section .section-subtitle {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+  }
+
+  .skills-section .section-title.show,
+  .skills-section .section-subtitle.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .skills-section .section-subtitle {
+    transition-delay: 0.2s;
   }
 }

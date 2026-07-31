@@ -187,3 +187,58 @@ const titleObserver = new IntersectionObserver(
 );
 
 titleObserver.observe(skillsSection);
+
+// kursorr======//
+
+const cursor = document.querySelector(".cursor");
+const dot = document.querySelector(".cursor-dot");
+
+window.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+
+  dot.style.left = e.clientX + "px";
+  dot.style.top = e.clientY + "px";
+});
+
+// ======================================
+// PROJECT SCROLL ANIMATION
+// ======================================
+
+const projectItems = document.querySelectorAll(".item");
+
+const projectObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  }
+);
+
+projectItems.forEach((item) => {
+  projectObserver.observe(item);
+});
+
+// ======================================
+// PROJECT VIDEO HOVER
+// ======================================
+
+document.querySelectorAll(".item video").forEach((video) => {
+  video.pause();
+
+  video.parentElement.addEventListener("mouseenter", () => {
+    video.play();
+  });
+
+  video.parentElement.addEventListener("mouseleave", () => {
+    video.pause();
+    video.currentTime = 0;
+  });
+});

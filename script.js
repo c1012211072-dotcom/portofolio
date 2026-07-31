@@ -242,3 +242,58 @@ document.querySelectorAll(".item video").forEach((video) => {
     video.currentTime = 0;
   });
 });
+// ======================================
+// EDUCATION SCROLL ANIMATION
+// ======================================
+
+const educationSection = document.querySelector("#education");
+const educationItems = document.querySelectorAll(".education-item");
+const educationTitle = educationSection?.querySelector(".section-title");
+const educationSubtitle = educationSection?.querySelector(".section-subtitle");
+
+const educationObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        educationTitle?.classList.add("show");
+        educationSubtitle?.classList.add("show");
+        educationItems.forEach((item) => item.classList.add("show"));
+      } else {
+        educationTitle?.classList.remove("show");
+        educationSubtitle?.classList.remove("show");
+        educationItems.forEach((item) => item.classList.remove("show"));
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+if (educationSection) {
+  educationObserver.observe(educationSection);
+}
+
+// ======================================
+// CONTACT SCROLL ANIMATION
+// ======================================
+
+const contactSection = document.querySelector("#contact");
+const contactElements = document.querySelectorAll(
+  ".contact-small, .contact-title, .contact-btn, .contact-links, .copyright"
+);
+
+const contactObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        contactElements.forEach((el) => el.classList.add("show"));
+      } else {
+        contactElements.forEach((el) => el.classList.remove("show"));
+      }
+    });
+  },
+  { threshold: 0.25 }
+);
+
+if (contactSection) {
+  contactObserver.observe(contactSection);
+}

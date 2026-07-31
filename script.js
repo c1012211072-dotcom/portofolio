@@ -164,3 +164,26 @@ function startLoader() {
 
 // Jalankan loader setelah halaman siap
 window.addEventListener("load", startLoader);
+// ===============================
+// Skills Title Animation
+// ===============================
+
+const skillsSection = document.querySelector("#skills");
+const skillsTitle = skillsSection.querySelector(".section-title");
+const skillsSubtitle = skillsSection.querySelector(".section-subtitle");
+
+const titleObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        skillsTitle.classList.add("show");
+        skillsSubtitle.classList.add("show");
+      }
+    });
+  },
+  {
+    threshold: 0.3,
+  }
+);
+
+titleObserver.observe(skillsSection);

@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="id">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - jery sokoy</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="foto/logo.png" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Jery Sokoy</title>
+
+    <link rel="icon" href="foto/logo.png">
+    <link rel="stylesheet" href="style.css">
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  </head>
+</head>
+
+<body>
+
+<div class="cursor"></div>
+<div class="cursor-dot"></div>
+
 
   <body>
     <!-- ================= LOADER ================= -->
@@ -25,16 +33,27 @@
     </div>
 
     <!-- ================= HOME ================= -->
-    <section id="home">
-      <div class="overlay"></div>
-      <div class="content">
+  <section id="home">
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline preload="metadata" class="background-video">
+        <source src="video/246535.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video.
+    </video>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Content -->
+    <div class="content">
         <h1 class="hero-title">Jery Sokoy</h1>
         <p class="hero-subtitle">Frontend Developer</p>
         <h2 class="hero-heading">Selamat Datang</h2>
         <p class="hero-description">Website Portofolio Saya</p>
         <a href="#about" class="btn hero-btn">Mulai</a>
-      </div>
-    </section>
+    </div>
+
+</section>
 
     <!-- ================= ABOUT ================= -->
     <section id="about">
@@ -60,28 +79,101 @@
               Editing.
             </p>
 
-            <div class="about-info">
-              <div class="info-box hidden zoom delay3">
-                <h3>10+</h3>
-                <span>Projects</span>
-              </div>
-              <div class="info-box hidden zoom delay4">
-                <h3>3+</h3>
-                <span>Years Learning</span>
-              </div>
-              <a href="#skills" class="info-link">
-              <a href="#skills" class="info-link">
-    <div class="info-box hidden zoom delay5">
-        <h3>5+</h3>
-        <span>Skills</span>
-    </div>
-</a>
-    </div>
-</a>
-            </div>
-          </div>
+           <div class="about-info">
+
+    <a href="#projects" class="info-link">
+        <div class="info-box hidden zoom delay3">
+            <h3>10+</h3>
+            <span>Projects</span>
         </div>
-      </div>
+    </a>
+    <a href="#education" class="info-link">
+    <div class="info-box hidden zoom delay4">
+       <h3>Education</h3>
+
+    </div>
+     </a>
+    <a href="#skills" class="info-link">
+        <div class="info-box hidden zoom delay5">
+            <h3>5+</h3>
+            <span>Skills</span>
+        </div>
+    </a>
+
+</div>
+    </section>
+
+    <!-- ================= Projects ================= -->
+
+    <section id="projects" class="projects-section">
+       <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Multimedia and Web Development</p>
+        
+        <div class="section-title">
+        <h2>Selected Projects</h2>
+       </div>
+
+    <div class="gallery">
+
+        <!-- Besar -->
+        <div class="item large">
+          <span class="shine"></span>
+            <img src="aset/Screenshot 2026-07-31 113623.png" alt="">
+        </div>
+
+        <!-- Kecil -->
+        <div class="item">
+          <span class="shine" ></span>
+            <img src="aset/Screenshot 2026-07-31 113638.png" alt="">
+        </div>
+
+        <!-- Video -->
+        <div class="item">
+          <span class="shine"></span>
+            <video autoplay muted loop playsinline>
+                <source src="video/0731.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Video -->
+        <div class="item">
+          <span class="shine"></span>
+            <video autoplay muted loop playsinline>
+                <source src="video/0731(1).mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Tinggi -->
+        <div class="item wide">
+          <span class="shine"></span>
+            <video autoplay muted loop playsinline>
+                <source src="video/0731(2).mp4" type="video/mp4">
+            </video>
+        </div>
+
+         <div class="item tall">
+          <span class="shine"></span>
+            <video autoplay muted loop playsinline>
+                <source src="video/0731 (3).mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+        <!-------screenshoot-->
+
+        <div class="item">
+          <span class="shine"></span>
+          <img src="foto/Screenshot 2026-07-31 121410.png">
+          
+        
+        </div>
+
+    </div>
+
+</section>
+
+
     </section>
 
     <!-- ================= SKILLS ================= -->
@@ -118,13 +210,84 @@
         </div>
       </div>
     </section>
+    <!-- ================= EDUCATION ================= -->
+<section id="education" class="education-section">
 
-    <section id="Portfolio">
-      <div></div>
-    </section>
-    <section id="Contact">
-      <div></div>
-    </section>
+    <div class="container">
+
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">My Academic Journey</p>
+
+        <div class="education-list">
+
+            <div class="education-item">
+                <img src="aset/SD.png" alt="SDK Kristen Permata">
+                <h3>SDK Kristen Permata</h3>
+            </div>
+
+            <div class="education-item">
+                <img src="aset/SMP.png" alt="SMP Kristen Makedonia">
+                <h3>SMP Kristen Makedonia</h3>
+            </div>
+
+            <div class="education-item">
+                <img src="aset/SNA.png" alt="SMA Kristen Makedonia">
+                <h3>SMA Kristen Makedonia</h3>
+            </div>
+
+            <div class="education-item">
+                <img src="aset/KAMPUS.png" alt="Universitas PGRI Pontianak">
+                <h3>Universitas PGRI Pontianak</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+  <!-- ================= CONTACT ================= -->
+<section id="contact">
+
+    <div class="contact-container">
+
+        <span class="contact-small">NEXT STEP</span>
+
+        <h2 class="contact-title">
+            AVAILABLE FOR <br>
+            NEW PROJECTS
+        </h2>
+
+        <a href="mailto:emailkamu@gmail.com" class="contact-btn">
+            LET'S TALK
+        </a>
+
+        <div class="contact-links">
+            <a href="https://github.com/c1012211072-dotcom" target="_blank">
+                GitHub
+            </a>
+
+            <a href="https://instagram.com/jerywrld999" target="_blank">
+                Instagram
+            </a>
+
+            <a href="https://wa.me/62895411712359" target="_blank">
+                WhatsApp
+            </a>
+
+            <a href="mailto:jeryj3896@gmail.com">
+                Email
+            </a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Jery Sokoy
+        
+        </p>
+
+    </div>
+
+</section>
 
     <script src="script.js"></script>
   </body>

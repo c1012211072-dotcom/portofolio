@@ -297,3 +297,34 @@ const contactObserver = new IntersectionObserver(
 if (contactSection) {
   contactObserver.observe(contactSection);
 }
+
+// ======================================
+// LANYARD INTERACTION
+// ======================================
+
+const lanyard = document.querySelector(".lanyard-container");
+const lanyardCard = document.querySelector(".lanyard-card");
+
+const lanyardObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Jalankan animasi jatuh
+        lanyard.classList.add("drop");
+
+        // Setelah selesai jatuh, mulai ayunan
+        setTimeout(() => {
+          lanyardCard.classList.add("swing");
+        }, 1500);
+
+        // Observer cukup sekali
+        lanyardObserver.unobserve(lanyard);
+      }
+    });
+  },
+  {
+    threshold: 0.45,
+  }
+);
+
+lanyardObserver.observe(lanyard);
